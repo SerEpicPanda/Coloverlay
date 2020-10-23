@@ -1,0 +1,10 @@
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\bin\Debug\Coloverlay.exe.config
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\bin\Debug\Coloverlay.exe
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\bin\Debug\Coloverlay.pdb
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.csprojAssemblyReference.cache
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.Properties.Resources.resources
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.csproj.GenerateResource.cache
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.csproj.CoreCompileInputs.cache
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.exe
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.pdb
+C:\Users\patri\Documents\Programs\Coloverlay\Coloverlay\obj\Debug\Coloverlay.OverlayWindow.resources
