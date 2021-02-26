@@ -39,12 +39,16 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.minimiseEscToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.colorCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incOpacityToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.decOpacityXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.minimiseEscToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maximiseDoubleClickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyCM.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +124,9 @@
             // 
             this.contextMenuStrip1.BackColor = System.Drawing.Color.DimGray;
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.maximiseDoubleClickToolStripMenuItem,
+            this.minimiseEscToolStripMenuItem1,
+            this.toolStripSeparator3,
             this.colorCToolStripMenuItem,
             this.incOpacityToolStripMenuItem1,
             this.decOpacityXToolStripMenuItem,
@@ -128,13 +135,26 @@
             this.closeKToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(132, 120);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 192);
+            // 
+            // minimiseEscToolStripMenuItem1
+            // 
+            this.minimiseEscToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.minimiseEscToolStripMenuItem1.Name = "minimiseEscToolStripMenuItem1";
+            this.minimiseEscToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.minimiseEscToolStripMenuItem1.Text = "Minimise (Esc)";
+            this.minimiseEscToolStripMenuItem1.Click += new System.EventHandler(this.minimiseEscToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(175, 6);
             // 
             // colorCToolStripMenuItem
             // 
             this.colorCToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.colorCToolStripMenuItem.Name = "colorCToolStripMenuItem";
-            this.colorCToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.colorCToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.colorCToolStripMenuItem.Text = "Colour (C)";
             this.colorCToolStripMenuItem.Click += new System.EventHandler(this.colorCToolStripMenuItem_Click);
             // 
@@ -142,7 +162,7 @@
             // 
             this.incOpacityToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.incOpacityToolStripMenuItem1.Name = "incOpacityToolStripMenuItem1";
-            this.incOpacityToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.incOpacityToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
             this.incOpacityToolStripMenuItem1.Text = "Inc Opacity (X)";
             this.incOpacityToolStripMenuItem1.Click += new System.EventHandler(this.incOpacityToolStripMenuItem1_Click);
             // 
@@ -150,20 +170,20 @@
             // 
             this.decOpacityXToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.decOpacityXToolStripMenuItem.Name = "decOpacityXToolStripMenuItem";
-            this.decOpacityXToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.decOpacityXToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.decOpacityXToolStripMenuItem.Text = "Dec Opacity (Z)";
             this.decOpacityXToolStripMenuItem.Click += new System.EventHandler(this.decOpacityXToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(128, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.helpToolStripMenuItem.Text = "Help (H)";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -171,9 +191,22 @@
             // 
             this.closeKToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.closeKToolStripMenuItem.Name = "closeKToolStripMenuItem";
-            this.closeKToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.closeKToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.closeKToolStripMenuItem.Text = "Close (K)";
             this.closeKToolStripMenuItem.Click += new System.EventHandler(this.closeKToolStripMenuItem_Click);
+            // 
+            // minimiseEscToolStripMenuItem
+            // 
+            this.minimiseEscToolStripMenuItem.Name = "minimiseEscToolStripMenuItem";
+            this.minimiseEscToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // maximiseDoubleClickToolStripMenuItem
+            // 
+            this.maximiseDoubleClickToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.maximiseDoubleClickToolStripMenuItem.Name = "maximiseDoubleClickToolStripMenuItem";
+            this.maximiseDoubleClickToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.maximiseDoubleClickToolStripMenuItem.Text = "Maximise (Double Click)";
+            this.maximiseDoubleClickToolStripMenuItem.Click += new System.EventHandler(this.maximiseDoubleClickToolStripMenuItem_Click);
             // 
             // OverlayWindow
             // 
@@ -189,12 +222,14 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(20, 18, 20, 18);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(50, 50);
             this.Name = "OverlayWindow";
             this.Opacity = global::Coloverlay.Properties.Settings.Default.OverlayOpacity;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coloverlay";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_DoubleClick);
             this.notifyCM.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -218,6 +253,10 @@
         private System.Windows.Forms.ToolStripMenuItem decOpacityXToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem closeKToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem minimiseEscToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem minimiseEscToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem maximiseDoubleClickToolStripMenuItem;
     }
 }
 

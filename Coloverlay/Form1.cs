@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Microsoft.WindowsAPICodePack.Taskbar;
 
 namespace Coloverlay
 {
@@ -10,10 +11,12 @@ namespace Coloverlay
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         bool opacityToggle = true;
         bool preventClose = true;
-        int borderSize = 25;
+        int borderSize = 50;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
+
+        JumpList jmpL = JumpList.CreateJumpList();
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -56,6 +59,23 @@ namespace Coloverlay
             }
         }
 
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+            ToggleMaximise();
+        }
+
+        private void ToggleMaximise()
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+        }
+
         private void ChangeSize(object sender, MouseEventArgs e)
         {
             if (e.Location.X > Width - borderSize)
@@ -83,15 +103,15 @@ namespace Coloverlay
                 {
                     if(e.Location.Y > Height - borderSize)
                     {
-                        Size = new System.Drawing.Size(e.X + 5, e.Y + 5);
+                        Size = new System.Drawing.Size(e.X + (borderSize / 2), e.Y + (borderSize/2));
                     } else
                     {
-                        Size = new System.Drawing.Size(e.X + 5, Height);
+                        Size = new System.Drawing.Size(e.X + (borderSize / 2), Height);
                     }
                 }
                 else if (e.Location.Y > Height - borderSize)
                 {
-                    Size = new System.Drawing.Size(Width, e.Y + 5);
+                    Size = new System.Drawing.Size(Width, e.Y + (borderSize / 2));
                 }
                 else
                 {
@@ -240,6 +260,16 @@ namespace Coloverlay
         private void closeKToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseOverlay();
+        }
+
+        private void minimiseEscToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void maximiseDoubleClickToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToggleMaximise();
         }
     }
 }
